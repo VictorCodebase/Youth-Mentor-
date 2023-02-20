@@ -1,0 +1,179 @@
+<html
+lang="en">
+
+<head>
+    <title> | Anne Kimathi</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./StyleCSS/Structure.css"/>
+    <link rel="stylesheet" href="./StyleCSS/ColorAndStyle.css"/>
+    <link rel="stylesheet" href="./StyleCSS/Response.css">
+    <link rel="icon" type="image/png" href="/ImageFolder/Icons/FavIconMom.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="https://unpkg.com/swup@3"></script>
+</head>
+
+<body>
+       <!--! Navigation Bar starts here-->
+       <div class="NavbarContainer" id="NavBar">
+        <div class="MommasTitle">
+            <div class="BrandingTextBox">
+                <a href="./Home.html"  class="Branding">
+                    <p class="AnneLogo PrimaryShade">Ann Kimathi, Youth Mentor</p>
+                </a>
+            </div>
+        </div>
+        <div class="NavigationElements">
+            <div class="Navigation PrimaryShade">
+                <a href="./Home.html" class="NavElement" id="Home" onclick="FlipPage('Home')">
+                    <!--NavFont for text design, primary shade for text color, navtext to improve structural look-->
+                    <p class="PrimaryShade NavFont NavText" id="HomeTxt">Home</p>
+                </a>
+                <a href="./Home.html#ActivitiesAnchor" class="NavElement" id="Activities" onclick="FlipPage('Activities')">
+                    <p class="PrimaryShade NavFont NavText" id="ActivitiesTxt">Activities</p>
+                </a>
+                <a href="/MyApproach.html" class="NavElement" id="Approach" onclick="FlipPage('Approach')">
+                    <p class="PrimaryShade NavFont NavText" id="ApproachTxt">My Approach</p>
+                </a>
+                <a href="/RecentEvents.html"  class="NavElement" id="RecentActivites" onclick="FlipPage('RecentActivities')">
+                    <p class="PrimaryShade NavFont NavText" id="RecentActivitiesTxt">Recent Activities</p>
+                </a>
+                <a href="./Home.html#ContactsAnchor" class="NavElement NavFont" id="Contact" onclick="FlipPage('Contact')">
+                    <p class="PrimaryShade NavFont NavText" id="ContactsTxt">Contact</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <!--!universal ChatBot starts here-->
+
+        <div class="ChatBar PrimaryShade PrimaryShadeForBG" onclick="ActivateChat()">
+        
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chat-left-text ChatIcon" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+             
+        </div> 
+        <div class="hidden PrimaryShade" draggable="true">
+            <div class="HeaderBar PrimaryShadeForBG">
+                <div class="BackButton ExtraInfoParent" onclick="leaveChat()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                    </svg>
+                    <div class="ExtraInfo">
+                        <p>Leave chat? </p>
+                    </div>
+                </div>
+                <div class="Heading">
+                    <div class="online">
+    
+                    </div>
+                    <p>Chatting with Anne</p>
+                </div>
+            </div>
+            <div class="ChatArea">
+    
+            </div>
+            <div>
+                <form action="" class="DraftArea PrimaryShadeForBG">
+    
+                    <div class="MessageSlot">
+                        
+                            
+                        <div class="messageDraft">
+                            <div class="EmojiSection">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+                                  </svg>
+                                <!--https://stackoverflow.com/questions/64127020/how-to-add-emoji-picker-to-chatbox-->
+                            </div>
+                            <!--! text area to include emoji section-->
+                            <!-- <textarea name="message" id="Msg" cols="30" rows="1" class="message"></textarea> -->
+                        </div>
+                    </div>
+                    <div class="SendSlot">
+                        <div class="send option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send rotateToView" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                            </svg>
+                            <!--https://www.joomlatools.com/blog/extensions/get-notified-when-users-perform-actions-on-your-website-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--?universal ChatBot ends here-->
+
+
+
+    <!-- <main id="swup" class="transition-fade">
+    <!--! Main Page-->
+    <div class="ApproachCarousel">
+        <div class="ImageDisplay">
+            <div class="slide">
+
+            </div>
+            <div class="slide">
+
+            </div>
+            <div class="slide">
+
+            </div>
+            <div class="slide">
+
+            </div>
+            <div class="slide">
+                
+            </div>
+            <button class="CarouselBtn BtnPrev" data-carousel-button="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left CarouselBtnArrow" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </button>
+
+        <button class="CarouselBtn BtnNext" data-carousel-button="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right CarouselBtnArrow" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+        </div>
+        `
+    </div> 
+    <div class="MyApproach MyApproachTextContainer">
+        <div class="MyApproachLeftPanel DividedPanels ">
+            <div id="ApproachText">
+                <p>
+                "As a youth mentor, my approach to helping and leading young people is centered on helping young people to <b>break free from the chains of sin and the patterns of this world</b> and instead focusing on being lead by Christ in righteousness. I believe that in order for young people to truly grow in Christ and make a difference, <b>they ought to be deeply rooted in God's word</b>. To achieve this, I focus on allowing my mentees to read the word and engage with it through discussion and journaling while giving them a free space to express their views and perspectives before guiding them. In addition to building strong biblical foundations, I also strive to provide my mentees with guidance, resources, and support as they navigate the challenges and opportunities of growing up. This might include helping them to set goals, develop coping strategies, and make positive choices in their very crucial years of youth. As a youth mentor, I see myself as a role model and guide, rather than someone who is there to tell my mentees what to do. I believe that young people are capable of making their own decisions and taking ownership of their own lives, and my role is to help them to develop the skills and confidence they need to do so"
+                </p>
+            </div>
+        </div>
+        <div class="MyApproachRightPanel DividedPanels PrimaryShadeForBG"></div>
+    </div>
+    <div class="Testimonials MyApproach">
+        <!--Im thinking of going full out here
+        -->
+        <div class="FacesContainer">
+            <img class="TestimonialStockImages STCimage1" src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
+            <img class="TestimonialStockImages STCimage2" src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
+            <img class="TestimonialStockImages STCimage3" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" >
+            <img class="TestimonialStockImages STCimage4" src="https://images.unsplash.com/photo-1517598024396-46c53fb391a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="" >
+            <img class="TestimonialStockImages STCimage5" src="https://images.unsplash.com/photo-1519076381129-b4234ae7e573?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=418&q=80" alt="" >
+            <img class="TestimonialStockImages STCimage6" src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" >
+            <img class="TestimonialStockImages STCimage7" src="https://images.unsplash.com/photo-1531727991582-cfd25ce79613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+        </div>
+            
+    </div>
+
+
+    <script src="./NavFunctionalityExtras/Approach.js"></script>
+    <script src="./FunctionalityJS/PageAnimations.js"></script>
+    <script src="./WebsiteText/TextFile.js"></script>
+    <script src="./FunctionalityJS/Carousels.js"></script>
+    <script src="./FunctionalityJS/Response.js"></script>
+</body>
+</html>

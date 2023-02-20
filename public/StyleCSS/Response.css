@@ -1,0 +1,19 @@
+/*! shared animations*/
+/*?footer animations no need for now*/
+
+ .focused
+{
+    animation-duration: 80ms;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn 
+{
+    from{
+      border-bottom: solid #94a7ae73 0.5px;
+    }
+    to{
+      border-bottom: solid #64766A 2px;
+    }
+}
+

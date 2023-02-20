@@ -1,0 +1,367 @@
+
+/*! Accent colors*/
+.PrimaryShade
+{
+    color:#64766A;
+}
+.PrimaryShadeBGForElements
+{
+    background-color: #64766A;
+}
+.PrimaryShadeForBG
+{
+    background-color: #94a7ae31;
+}
+
+.SecondaryShade
+{
+    color:rgba(245, 245, 245, 0.78) ; 
+}
+.SecondaryShadeBGForElements
+{
+    background-color:#C0A9BD;
+}
+.SpecialShade
+{
+    background-color: #64766A;
+}
+
+
+
+/*? Accent colors Styling Ends #######################*/ 
+
+
+
+
+/*! Shared Styles starts here #################################*/
+
+html
+{
+    scroll-behavior: smooth;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.ButtonsStylized
+{
+    border: solid 1px black;
+    /* TODO(fix accent colors): get other high contrast colors for stuff like borders */
+    opacity: 1;
+    
+}
+.CommonButton:hover
+{
+    transition: 70ms;
+    opacity: 0.7;
+}
+.BackgroundImg
+{
+    margin: 0;
+    width: auto;
+    height: 100%;
+}
+
+.footer
+{
+    background-color: black;
+    display: flex;
+    color: rgba(245, 245, 245, 0.78);
+    align-items: center;
+    bottom: 0;
+    width: 100vw;
+    height: 40px;
+}
+.footer > p
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type='text'], input[type='tel']
+{
+    border-style: hidden;
+    width: 70%;
+    background-color: aliceblue;
+}
+input[type='text']:focus, input[type='tel']:focus
+{
+    outline: none;
+}
+textarea:focus{
+    outline: none;
+}
+
+textarea
+{
+    border-style: hidden;
+}
+
+
+.ExtraInfo
+{
+    display: none;
+}
+.ExtraInfoParent:hover > .ExtraInfo
+{
+    transition: all 200s;
+    z-index: 2;
+    display: flex;
+    position:absolute;
+    align-items: center;
+    left: -60px;
+    top: 40px;
+    background-color: grey;
+    height: 40px;
+    width: max-content;
+    color: aliceblue;
+}
+.ExtraInfoParent:hover > .ExtraInfo > p
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*!decided to put chatbox here coz its shared*/
+ .ChatBar
+{
+    border-radius: 50%;
+    border: solid 2px;
+}
+.ChatIconText
+{
+    display: none;
+}
+.ChatBar:hover
+{
+    transition: all 120ms;
+    border: solid 1px;
+    background-color: #64766A;
+    color: rgba(245, 245, 245, 0.78);
+    
+}
+.ChatBar:hover > .ChatIconText
+{
+    color: rgba(245, 245, 245, 0.78);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+/*?Chatbar ends*/
+.hidden
+{
+    
+    background-color: aliceblue;
+    border: solid 1px;
+    box-shadow: 2px 2px 4px 2px ;
+    border-radius: 5px;
+}
+.HeaderBar
+{
+    border-bottom: solid 0.5px #64766A;
+}
+.online
+{
+    background-color: rgb(151, 251, 1);
+    border: solid green 1px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.BackButton:hover
+{
+    background-color: #94a7ae31;
+    cursor: pointer;
+    
+}
+.DraftArea
+{
+    border-top: #64766A 1px solid;
+    border-bottom: #64766A 1px solid;
+}
+.option
+{
+    background-color: aliceblue;
+    border-radius: 50%;
+    border: #64766A 1px solid;
+    display: flex;
+    align-items: center;
+}
+.option:hover
+{
+    transition: 100ms;
+    background-color: #94a7ae31;
+    cursor: pointer;
+}
+
+
+.EmojiSection
+{
+    border-radius: 50px;
+}
+.EmojiSection:hover
+{
+    transition: 100ms;
+    background-color: #94a7ae31;
+    border: #64766A 1px solid;
+}
+.EmojiSelectionBar
+{
+    border-top: #64766A 1px solid;
+}
+
+.EmojisCollection > div:hover
+{
+    background-color: #94a7ae31;
+}
+.EmojiSearchBar
+{
+    border: #64766A 1px solid;
+    border-radius: 20px;
+}
+.EmojiSearchBar >svg
+{
+    margin-left: 6px;
+}
+.cancelSearch
+{
+    display: none;
+}
+.EmojiSearchBar:hover{border: #64766A 2px solid;}
+
+.EmojiSearchTextBox
+{
+    display: none;
+}
+
+
+.messageDraft
+{
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: #64766A 1px solid;
+}
+
+.DragHandle
+{
+    background-color: #64766A;
+    cursor: move;
+    border-radius: 5px;
+}
+
+
+
+
+/*Chat area texts for JS*/
+.Assistant
+{
+    outline: solid #64766A 1px;
+}
+.Client
+{
+    outline: solid #64766A 1px;
+    background-color: #94a7ae31;
+}
+.SubmitDetailsChat
+{
+    background-color: transparent;
+    border: none;
+    outline: solid #64766A 1px;
+    border-radius: 5px;
+}
+.SubmitDetailsChat:hover{
+    transition: all 100ms;
+    background-color: #94a7ae31;
+}
+.chatContactBox
+{
+    border-bottom: solid #94a7ae31 1px;
+}
+
+
+
+/*! Navigation Panel starts here #################################*/
+.NavbarContainer
+{
+    background-color: rgba(245, 245, 245, 0.78);
+}
+.Navigation
+{
+    border-top:solid 1px;
+    border-bottom:solid 1px;
+}
+
+/*? Navigation Panel Styling Ends #######################*/ 
+
+
+
+
+
+/*! Landing Page Starts ###########################################*/
+
+.Title
+{
+    font-size: 600%;
+    font-weight: 5;
+    font-family: 'futura-thin-normal', sans-serif;
+}
+
+/*? Landing Page Styling Ends #######################*/ 
+
+
+
+
+/*! Activities Page Starts ###########################################*/
+.ActivitiesCarouselContainer
+{
+    background-color: black;
+}
+
+.ActivitiesCarousel:hover .CarouselBtn
+{
+    /*? Hovering on parent affects direct child*/
+    transition: 80ms;
+    display: flex;
+}
+.CarouselImg
+{
+    border-bottom: solid 5px black;
+}
+.CarouselBtn
+{
+    border: solid #64766A;
+    background-color: #94a7ae31;
+    opacity: 0.4;
+    display: none;
+    cursor: pointer;
+}
+.CarouselBtn:hover,
+.CarouselBtn:focus
+{
+    transition: 70ms;
+    opacity: 1;
+    color: aliceblue;
+}
+.CarouselBtnArrow
+{
+    stroke-width: 10%;
+    stroke: #64766A;
+}
+
+
+
+
+/*! Contacts Block Starts ###########################################*/
+.borderStyle
+{
+    border-bottom: solid #94a7ae73 1.5px;
+}
+.m_text
+{
+    background-color: aliceblue;
+}
+.subject{background-color: aliceblue;}
+
+.focused
+{
+    border-bottom: solid #64766A 2px;
+}
+

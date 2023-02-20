@@ -1,0 +1,337 @@
+<html
+lang="en">
+
+<head>
+    <title>HOME | Anne Kimathi</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Fredoka+One&family=Indie+Flower&family=Inspiration&family=Passions+Conflict&family=Qwitcher+Grypen:wght@700&family=Rubik+Dirt&family=Tangerine&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/StyleCSS/Structure.css"/>
+    <link rel="stylesheet" href="/StyleCSS/ColorAndStyle.css"/>
+    <link rel="stylesheet" href="/StyleCSS/Response.css">
+    <link rel="icon" type="image/png" href="/ImageFolder/Icons/FavIconMom.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <script defer src="https://unpkg.com/swup@3"></script> -->
+
+</head>
+
+<body>
+
+    <!--! Navigation Bar starts here-->
+    <div class="NavbarContainer" id="NavBar">
+        <div class="MommasTitle">
+            <div class="BrandingTextBox">
+                <a href="./Home.html"  class="Branding">
+                    <p class="AnneLogo PrimaryShade">Ann Kimathi, Youth Mentor</p>
+                </a>
+            </div>
+        </div>
+        <div class="NavigationElements">
+            <div class="Navigation PrimaryShade">
+                <a href="#" class="NavElement" id="Home" onclick="FlipPage('Home')">
+                    <!--NavFont for text design, primary shade for text color, navtext to improve structural look-->
+                    <p class="PrimaryShade NavFont NavText" id="HomeTxt">Home</p>
+                </a>
+                <a href="#ActivitiesAnchor" class="NavElement" id="Activities" onclick="FlipPage('Activities')">
+                    <p class="PrimaryShade NavFont NavText" id="ActivitiesTxt">Activities</p>
+                </a>
+                <a href="/MyApproach.html" class="NavElement" id="Approach" onclick="FlipPage('Approach')">
+                    <p class="PrimaryShade NavFont NavText" id="ApproachTxt">My Approach</p>
+                </a>
+                <a href="/RecentEvents.html"  class="NavElement" id="RecentActivites" onclick="FlipPage('RecentActivities')">
+                    <p class="PrimaryShade NavFont NavText" id="RecentActivitiesTxt">Discover</p>
+                </a>
+                <a href="#ContactsAnchor" class="NavElement NavFont" id="Contact" onclick="FlipPage('Contact')">
+                    <p class="PrimaryShade NavFont NavText" id="ContactsTxt">Contact</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--!universal ChatBot starts here-->
+
+    <div class="ChatBar PrimaryShade PrimaryShadeForBG" id="ChatBotBtn">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chat-left-text ChatIcon" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+         
+    </div> 
+    <div class="hidden PrimaryShade" id="ChatbotDialog">
+        <div class="HeaderBar PrimaryShadeForBG">
+            <div class="BackButton ExtraInfoParent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+                <div class="ExtraInfo">
+                    <p>Leave chat? </p>
+                </div>
+            </div>
+            <div class="Heading">
+                <div class="online">
+
+                </div>
+                <p>Chatting with Anne</p>
+            </div>
+        </div>
+        <div class="ChatArea" id="ChatAreaID">
+
+            <!-- Conversation area -->
+            <!-- ! Use ::Before to add the images before -->
+            <div class="Assistant textBubble">
+                <!-- i'll append child -->
+                <p>title</p>
+                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <form action="/" method="post">
+                    <div class="nameBox chatContactBox">
+                        <label for="name">Name: </label>
+                        <input type="text" name="Name" id="name">
+                    </div>
+                    <br>
+                    <div class="emailBox chatContactBox">
+                        <label for="contact">Contact: </label>
+                        <input type="text" name="Contact" id="contact">
+                    </div>
+                    <button type="submit" class="CommonButton SubmitDetailsChat"><p>submit</p></button>
+                </form>
+            </div>
+            <div class="Client textBubble">
+                 <!-- ill append child -->
+                 <div class="styler ClientStyler"></div>
+            </div>
+            <div class="Assistant textBubble">
+                <!-- ill append child -->
+                <p>title</p>
+                
+            </div>
+
+
+
+
+
+
+
+            <!--! Emojis here-->
+            <div class="EmojiSelectionBar"  id="EmojiSelectionBarID">
+                <div class="EmojisSearch">
+                    <div class="EmojiSearchBar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search searchIcon" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x cancelSearchSecondary cancelSearch" viewBox="0 0 16 16" onclick="CloseSearch()">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                        <input type="text" class="EmojiSearchTextBox" id="EmojiSearchID" placeholder="search...">
+                    </div>
+                </div>
+                <div class="EmojisCollection" id="EmojisCollectionID">
+                    <sth class="DisplayHidden" id="internetConnectionErr">
+                        
+                    </sth>
+                    <sth>
+                        <img src="./ImageFolder/Icons/Eclipse-1s-200px.svg" alt="loading" class="loadingSign EmojiLoading">
+                    </sth>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form action="/" method="post" class="DraftArea PrimaryShadeForBG">
+                <div class="MessageSlot">
+                    
+                        
+                    <div class="messageDraft">
+                        <div class="EmojiSection">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-laughing StartEmoji" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x cancelSearchMain cancelSearch" viewBox="0 0 16 16" onclick="CloseSearch()">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                            <!--https://stackoverflow.com/questions/64127020/how-to-add-emoji-picker-to-chatbox-->
+                        </div>
+                        <!--! text area to include emoji section-->
+                        <textarea name="Message" id="Message" cols="35" rows="2" class="textArea"></textarea> 
+                    </div>
+                </div>
+                <div class="SendSlot">
+                    <button type="submit" class="send option">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send rotateToView" viewBox="0 0 16 16">
+                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                        </svg>
+                        <!--https://www.joomlatools.com/blog/extensions/get-notified-when-users-perform-actions-on-your-website-->
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="DragArea" id="handle">
+            <div class="DragHandle" >
+                
+            </div>
+        </div>
+    </div>
+    <!--?universal ChatBot ends here-->
+
+
+
+
+    <main id="swup" class="transition-fade">
+    <!--! Landing Page-->
+    <div class="LandingPageBackgroundContainer BackgroundContainer">
+        <div class="LeftPanelLandingPage DividedPanels PrimaryShadeForBG">
+            <img src="./ImageFolder/IllustrationMedia/IMG-20210726-WA0010.png" style="margin-left:3%; height: 145%;"/>
+        </div>
+        <div class="RightPanelLandingPage DividedPanels">
+            <div class="MainTitleBlockForMomma">
+                <div class="TitleContainer">
+                    <div class="HeyMomma">
+                        <h1 class="Title">
+                            Anne <br>
+                            Kimathi
+                        </h1>
+                    </div>
+                    <div class="SpecialityContainer">
+                            <div class="line"></div>
+                            <h2 class="Speciality AccentTextBlue">
+                                Youth Mentor, Speaker
+                            </h2>
+                    </div>
+                </div>
+            </div>
+            <div id="LandingPageText">
+                <!--? looking for this text? Check Website text folder-->
+            </div>
+            <a href="./RecentEvents.html">
+                <button class="ButtonsStylized CommonButton PrimaryShadeBGForElements SecondaryShade">
+                    <p class="ButtonText">View Recent Events
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>  
+                    </p>
+                    
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!--! Activities Block-->
+    <div id="ActivitiesAnchor"></div>
+    <div class="ActivitiesBlockBackgroundContainer">
+        <div class="ActivitiesCarouselContainer">
+            <div class="ActivitiesCarousel" >
+                <div class="CarouselImg" id="CarouselImgId">
+                        <section aria-label="Newest Photos">
+                            <div>
+                                <div>EmojisCollectionID
+                                    <li class="slide">
+                                        <!-- <img src="ImageFolder\IllustrationMedia\ActivitiesMomTalkingToSaintPaulsYouth.jpg" alt=""> -->
+                                    </li>
+                                    <li class="slide">
+                                        <!-- <img src="ImageFolder\IllustrationMedia\MommsyAndManyYouthsPosingEdited.jpg" alt=""> -->
+                                    </li>
+                                    <li class="slide">
+                                        <!-- <img src="ImageFolder\IllustrationMedia\20171231_132042.jpg" alt=""> -->
+                                    </li>
+                                    <li class="slide">
+                                        <!-- <img src="ImageFolder\IllustrationMedia\ActivitiesMomExplainingPoinSaintPauls.jpg" alt=""> -->
+                                    </li>
+                                </div>
+                            </div>
+                        </section>
+                        <button class="CarouselBtn BtnPrev" onclick="goBack('true')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left CarouselBtnArrow" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </button>
+
+                        <button class="CarouselBtn BtnNext" onclick="goNext(true)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right CarouselBtnArrow" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--! Contacts block-->
+    <div class="ContactsBlockBackgroundContainer BackgroundContainer">
+        <div class="LeftPanelContactsPage DividedPanels">
+           <div id="ContactsAnchor"></div>
+           <img class="BackgroundImg" src="./ImageFolder/DecorationMedia/PotPlant.jpg" alt="">
+        </div>
+        <div class="RightPanelContactsPage DividedPanels">
+
+            <div class="contactAnne">
+                <form action="mailto:markkithinji469@gmail.com">
+                    <div class="visitorName borderStyle">
+                        <div class="fName details">
+                            <p class="contactsText">
+                                Name:
+                            </p>
+                            <input type="text" name="Name focusName" id="name" placeholder="Mr. Both Names">
+                        </div>
+                        <div class="Contact details">
+                            <p class="contactsText">
+                                Contact:
+                            </p>
+                            <input type="text" name="Contact" id="contact" placeholder="eg. 254712345678">
+                        </div>
+                    </div>
+                    <div class="messageBox">
+                        <div class="subject details borderStyle">
+                            <p class="contactsText">
+                                Subject:
+                            </p>
+                            <input type="text" name="Subject" id="Subject">
+                        </div>
+                        <div class="messagetextArea borderStyle">
+                            <p class="contactsText">
+                                Message:
+                            </p>
+                            <textarea name="messageText" class="m_text" id="m_text" cols="60" rows="5"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button class="submitBox ButtonsStylized CommonButton" type="submit">
+                        <div class="ButtonText PrimaryShade">
+                            <p>Send to Anne</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </div>
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="footerText">
+            AnneKimathi&copy Youth Mentor @2023
+        </p>
+    </div>
+
+    </main>
+    
+    <script src="./NavFunctionalityExtras/Home.js"></script>
+    <script src="./FunctionalityJS/Response.js"></script>
+    <script src="./WebsiteText/TextFile.js"></script>
+    <script src="./FunctionalityJS/Carousels.js"></script>
+    <script src="./FunctionalityJS/PageAnimations.js"></script>
+    <script src="./FunctionalityJS/ChatBotAssistant.js"></script>
+</body>
+</html>

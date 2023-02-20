@@ -1,0 +1,117 @@
+<html
+lang="en">
+
+<head>
+    <title>Anne Kimathi</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./StyleCSS/Structure.css"/>
+    <link rel="stylesheet" href="./StyleCSS/ColorAndStyle.css"/>
+    <script defer src="https://unpkg.com/swup@3"></script>
+</head>
+
+<body>
+
+    <!--! Navigation Bar starts here-->
+    <div class="NavbarContainer" id="NavBar">
+        <div class="MommasTitle">
+            <div class="BrandingTextBox">
+                <p class="Branding AccentTextBlue">
+                    <a href="./Home.html">Ann Kimathi, Youth Mentor</a>
+                </p>
+            </div>
+        </div>
+        <div class="NavigationElements">
+            <div class="Navigation PrimaryShade">
+                <a href="./Home.html" class="NavElement" id="Home" onclick="FlipPage('Home')">
+                    <!--NavFont for text design, primary shade for text color, navtext to improve structural look-->
+                    <p class="PrimaryShade NavFont NavText" id="HomeTxt">Home</p>
+                </a>
+                <a href="./Home.html#ActivitiesAnchor" class="NavElement" id="Activities" onclick="FlipPage('Activities')">
+                    <p class="PrimaryShade NavFont NavText" id="ActivitiesTxt">Activities</p>
+                </a>
+                <a href="./MyApproach.html" class="NavElement" id="Approach" onclick="FlipPage('Approach')">
+                    <p class="PrimaryShade NavFont NavText" id="ApproachTxt">My Approach</p>
+                </a>
+                <a href="#"  class="NavElement PrimaryShadeBGForElements" id="RecentActivites" onclick="FlipPage('RecentActivities')">
+                    <p class="SecondaryShade NavFont NavText" id="RecentActivitiesTxt">Recent Activities</p>
+                </a>
+                <a href="./Home.html#ContactsAnchor" class="NavElement NavFont" id="Contact">
+                    <p class="PrimaryShade NavFont NavText" id="ContactsTxt">Contact</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    
+        <!--!universal ChatBot starts here-->
+
+        <div class="ChatBar PrimaryShade PrimaryShadeForBG" onclick="ActivateChat()">
+        
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chat-left-text ChatIcon" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+             
+        </div> 
+        <div class="hidden PrimaryShade" draggable="true">
+            <div class="HeaderBar PrimaryShadeForBG">
+                <div class="BackButton ExtraInfoParent" onclick="leaveChat()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                    </svg>
+                    <div class="ExtraInfo">
+                        <p>Leave chat? </p>
+                    </div>
+                </div>
+                <div class="Heading">
+                    <div class="online">
+    
+                    </div>
+                    <p>Chatting with Anne</p>
+                </div>
+            </div>
+            <div class="ChatArea">
+    
+            </div>
+            <div>
+                <form action="" class="DraftArea PrimaryShadeForBG">
+    
+                    <div class="MessageSlot">
+                        
+                            
+                        <div class="messageDraft">
+                            <div class="EmojiSection">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+                                  </svg>
+                                <!--https://stackoverflow.com/questions/64127020/how-to-add-emoji-picker-to-chatbox-->
+                            </div>
+                            <!--! text area to include emoji section-->
+                            <!-- <textarea name="message" id="Msg" cols="30" rows="1" class="message"></textarea> -->
+                        </div>
+                    </div>
+                    <div class="SendSlot">
+                        <div class="send option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send rotateToView" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                            </svg>
+                            <!--https://www.joomlatools.com/blog/extensions/get-notified-when-users-perform-actions-on-your-website-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--?universal ChatBot ends here-->
+
+
+    <main id="swup" class="transition-fade">
+        <h1>My Approach page</h1>
+    </main>
+
+    <script src="./NavFunctionalityExtras/RecentActivities.js"></script>
+    <script src="./FunctionalityJS/PageAnimations.js"></script>
+</body>
+</html>
