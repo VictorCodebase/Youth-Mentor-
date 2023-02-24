@@ -40,7 +40,7 @@ lang="en">
                 <a href="/MyApproach.html" class="NavElement" id="Approach" onclick="FlipPage('Approach')">
                     <p class="PrimaryShade NavFont NavText" id="ApproachTxt">My Approach</p>
                 </a>
-                <a href="/RecentEvents.html"  class="NavElement" id="RecentActivites" onclick="FlipPage('RecentActivities')">
+                <a href="/Discover.html"  class="NavElement" id="RecentActivites" onclick="FlipPage('RecentActivities')">
                     <p class="PrimaryShade NavFont NavText" id="RecentActivitiesTxt">Discover</p>
                 </a>
                 <a href="#ContactsAnchor" class="NavElement NavFont" id="Contact" onclick="FlipPage('Contact')">
@@ -86,29 +86,19 @@ lang="en">
                 <!-- i'll append child -->
                 <p>title</p>
                 <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <form action="/" method="post">
+                <div name="pseudoForm" target="_blank">
                     <div class="nameBox chatContactBox">
                         <label for="name">Name: </label>
-                        <input type="text" name="Name" id="name">
+                        <input type="text" id="ChatName">
                     </div>
                     <br>
                     <div class="emailBox chatContactBox">
                         <label for="contact">Contact: </label>
-                        <input type="text" name="Contact" id="contact">
+                        <input type="text" id="ChatContact">
                     </div>
-                    <button type="submit" class="CommonButton SubmitDetailsChat"><p>submit</p></button>
-                </form>
+                    <button class="CommonButton SubmitDetailsChat" onclick="StoreData()"><p>submit</p></button>
+                </div>
             </div>
-            <div class="Client textBubble">
-                 <!-- ill append child -->
-                 <div class="styler ClientStyler"></div>
-            </div>
-            <div class="Assistant textBubble">
-                <!-- ill append child -->
-                <p>title</p>
-                
-            </div>
-
 
 
 
@@ -156,10 +146,14 @@ lang="en">
                         </div>
                         <!--! text area to include emoji section-->
                         <textarea name="Message" id="Message" cols="35" rows="2" class="textArea"></textarea> 
+                        <div class="GhostInputs">
+                            <input type="text" name= "ClientName" id="GhostName">
+                            <input type="text" name ="Contact" id="GhostContact">
+                        </div>
                     </div>
                 </div>
                 <div class="SendSlot">
-                    <button type="submit" class="send option">
+                    <button type="submit" class="send option" onclick="newMessage(document.getElementById('Message').value)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send rotateToView" viewBox="0 0 16 16">
                         <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                         </svg>
@@ -291,6 +285,7 @@ lang="en">
                             <input type="text" name="Contact" id="contact" placeholder="eg. 254712345678">
                         </div>
                     </div>
+                    
                     <div class="messageBox">
                         <div class="subject details borderStyle">
                             <p class="contactsText">

@@ -131,9 +131,18 @@ $("#m_text").focusout(
 
 $(document).ready(function()
 {
+  var CloseSearchClicked = false;
   //?opening chat
   $('.ChatBar').click(function()
   {
+    if (CloseSearchClicked == true)
+    {
+      $('.hidden').animate({
+      top: "-=100",
+      opacity:"-=0.9"
+    }, 100, 'swing')
+    }
+    
     $('.ChatBar').hide();
     $(".hidden").fadeTo("fast", 1);
     $('.textArea').focus();
@@ -142,13 +151,12 @@ $(document).ready(function()
   //? closing chat
   $('.BackButton').click(function()
   {
+    CloseSearchClicked = true;
     $('.hidden').animate({
-      height: "-=600"
+      top: "+=100",
+      opacity:"-=0.9"
     }, 400, 'swing')
     $('.hidden').fadeTo("fast", 0);
-    $('.hidden').animate({
-      height: "+=600"
-    }, 400, 'swing')
     $('.hidden').fadeOut();
     $('.ChatBar').show();
    
@@ -386,3 +394,17 @@ window.onscroll = function() {
     $('#ChatBotBtn').fadeIn();
   }
 }
+
+//!Ensuring the message does not overflow too much
+const ChatBotTextArea = document.getElementById('Message');
+
+ChatBotTextArea.addEventListener('input', ()=>
+{
+  ChatBotTextArea.style.height = 'auto';
+
+  if ( ChatBotTextArea.scrollHeight < 70){
+    ChatBotTextArea.style.height = `${ChatBotTextArea.scrollHeight}px`;
+    ChatBotTextArea.scrollTop = ChatBotTextArea.scrollHeight;
+  }
+  
+});
