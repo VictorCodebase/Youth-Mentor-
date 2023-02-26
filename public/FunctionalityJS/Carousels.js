@@ -188,7 +188,7 @@
 let images = document.querySelectorAll('.slide');
 var imageNum = 0;
 images.forEach(image => {
-  console.log(image);
+  //console.log(image);
   image.setAttribute('id', `image-${imageNum}`)
   imageNum++;
 });
@@ -229,7 +229,7 @@ function goNext(nextBtn)
 
     imageToShow.setAttribute("class", 'slide displaySlide')
     imageToHide.setAttribute("class", 'slide hideSlide')
-    console.log(imageNum, "follow")
+    //console.log(imageNum, "follow")
     
   }
   else{imageNum = 0; }
@@ -248,3 +248,49 @@ function goBack(backBtn)
   
 }
 
+
+
+//!Testiomonials image swiper
+let countKeeper = 1;
+let prevCountKeeper = countKeeper - 1;
+let STCimages = document.querySelectorAll(".TestimonialStockImages");
+let Slider = document.getElementById("sliderID");
+
+
+function ControlSlider(imageNum, prevImageNum)
+{
+  if (imageNum == 1){prevImageNum = STCimages.length;}
+  else if(imageNum >= 2){prevImageNum = imageNum - 1;}
+
+  console.log(`prev >> ${prevImageNum}, img>> ${imageNum}`)
+  let YouthOnDisplay = document.getElementById(`STCimageDisplay${imageNum}`)
+  let YouthOffDisplay = document.getElementById(`STCimageDisplay${prevImageNum}`)
+  var DynamicSTCimageID = document.getElementById(`STCimageID${imageNum}`)
+  console.log(`STCimageID${imageNum}`)
+  const dimensions = DynamicSTCimageID.offsetLeft;
+  console.log(`Computed left for image ${countKeeper} is ${dimensions}.`);
+  setTimeout(()=>
+  {
+     YouthOnDisplay.style.opacity = "1"
+      YouthOffDisplay.style.opacity = "0"
+  }, 1000)
+ 
+  
+  anime({
+    targets: '.SliderNode',
+    left: dimensions +20,
+    easing:'easeInOutQuad'
+  })
+
+  setTimeout(() =>
+  {
+    if(countKeeper == STCimages.length)
+    {
+      countKeeper = 1
+    }
+    else{countKeeper++}
+    ControlSlider(countKeeper, prevCountKeeper)
+  }, 2500)
+}
+
+ControlSlider(countKeeper, prevCountKeeper)

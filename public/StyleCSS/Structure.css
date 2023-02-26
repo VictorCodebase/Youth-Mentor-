@@ -683,7 +683,7 @@ a
     position: absolute;
     width: 60vw;
     height: 5px;
-    margin-top: 40%;
+    margin-top: 610px;
 }
 .SliderNode
 {
@@ -708,6 +708,7 @@ a
     width: 200px;
     height: 500px;
     margin-top: 100px;
+    opacity: 0;
 }
 .BackDrop
 {
