@@ -308,7 +308,7 @@ a
 .NavbarContainer
 {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     height: 126px;
     width: 100%;
     min-width: 740px;
@@ -657,7 +657,7 @@ a
 /*! Testimonials section starts*/
 .Testimonials
 {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: row;
 }
@@ -695,6 +695,7 @@ a
 }
 
 
+
 .FacesContainerOnDisplay
 {
     z-index: 1;
@@ -726,11 +727,21 @@ a
     right: 10%;
     top: 20%;
 }
+.YouthTestimony > p
+{
+    position: absolute;
+    display: none;
+}
 .YouthTestimonyName
 {
     position: absolute;
     right: 10%;
     top: 80%;
+}
+.YouthTestimonyName > h3
+{
+    position: relative;
+    display: none;  
 }
 .Quote
 {

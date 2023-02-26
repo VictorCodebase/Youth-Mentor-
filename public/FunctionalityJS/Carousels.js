@@ -257,6 +257,7 @@ let STCimages = document.querySelectorAll(".TestimonialStockImages");
 let Slider = document.getElementById("sliderID");
 
 
+
 function ControlSlider(imageNum, prevImageNum)
 {
   if (imageNum == 1){prevImageNum = STCimages.length;}
@@ -265,14 +266,35 @@ function ControlSlider(imageNum, prevImageNum)
   console.log(`prev >> ${prevImageNum}, img>> ${imageNum}`)
   let YouthOnDisplay = document.getElementById(`STCimageDisplay${imageNum}`)
   let YouthOffDisplay = document.getElementById(`STCimageDisplay${prevImageNum}`)
+
+  let YouthTestimonyOnDisplay = document.querySelector(`.YouthTestimonial${imageNum}`)
+  let YouthTestimonyOffDisplay = document.querySelector(`.YouthTestimonial${prevImageNum}`)
+  let YouthNameOnDisplay = document.querySelector(`.YouthName${imageNum}`)
+  let YouthNameOffDisplay = document.querySelector(`.YouthName${prevImageNum}`)
   var DynamicSTCimageID = document.getElementById(`STCimageID${imageNum}`)
   console.log(`STCimageID${imageNum}`)
   const dimensions = DynamicSTCimageID.offsetLeft;
   console.log(`Computed left for image ${countKeeper} is ${dimensions}.`);
   setTimeout(()=>
   {
-     YouthOnDisplay.style.opacity = "1"
-      YouthOffDisplay.style.opacity = "0"
+    // YouthOnDisplay.style.opacity = "1"
+    // YouthOffDisplay.style.opacity = "0"
+    anime({
+      targets:`#STCimageDisplay${imageNum}`,
+      opacity: 1,
+      duration: 700
+    });
+    anime({
+      targets:`#STCimageDisplay${prevImageNum}`,
+      opacity: 0,
+      duration: 700
+    });
+
+    YouthTestimonyOnDisplay.style.display = "block";
+    YouthTestimonyOffDisplay.style.display = "none";
+
+    YouthNameOnDisplay.style.display = "block";
+    YouthNameOffDisplay.style.display = "none";
   }, 1000)
  
   
@@ -290,7 +312,7 @@ function ControlSlider(imageNum, prevImageNum)
     }
     else{countKeeper++}
     ControlSlider(countKeeper, prevCountKeeper)
-  }, 2500)
+  }, 3500)
 }
 
 ControlSlider(countKeeper, prevCountKeeper)
