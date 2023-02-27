@@ -479,7 +479,7 @@ a
 
 .slide
 {
-    display: none;
+    /* display: none; */
     position: absolute;
     width: 100%;
    align-items: center;
@@ -525,14 +525,14 @@ a
     margin-right: auto;
 }
 
-.displaySlide
+/* .displaySlide
 {
     display: flex;
 }
 .hideSlide
 {
     display: none;
-}
+} */
 
 /*? Activities Block Ends ################################*/
 

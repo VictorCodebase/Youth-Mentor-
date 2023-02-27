@@ -186,66 +186,61 @@
 //! trial 6 -- trying to do a more functional one
 //Vanilla Javascript
 let images = document.querySelectorAll('.slide');
-var imageNum = 0;
-images.forEach(image => {
-  //console.log(image);
-  image.setAttribute('id', `image-${imageNum}`)
-  imageNum++;
-});
 
-imageNum = 0;
-function ImageSwap(direction)
+
+function ImageSwap(direction, CurrentImageNum, PrevImageNum)
 {
 
   if (direction == "right") 
   {
-    goNext( false)
+    goNext( false, CurrentImageNum,  PrevImageNum)
   }else if (direction == "left") 
   {
-    goBack(false)
+    goBack(false, CurrentImageNum,  PrevImageNum)
   }
-  else{goNext(false)}
-
-  var timeOut = setTimeout(() =>{
-    ImageSwap("right");
-  }, 1000)
+  else{goNext(false, CurrentImageNum,  PrevImageNum)}
   
 }
-ImageSwap('right');
+ImageSwap('right', 1, 0);
 
 //?this will have to be impure functions 😐
-function goNext(nextBtn)
+function goNext(nextBtn, imgNum, prevNum)
 {
-  //go next
-  //console.log(imageNum, nextBtn, "hey")
-  if (imageNum < images.length - 1)
-  {
-    ++imageNum
+  if(prevNum == 0){prevNum = images.length; console.log("hry")}
+  else{prevNum = imgNum - 1}
+  if(imgNum > images.length){imgNum = 1}
 
-    let imageToShow = document.getElementById(`image-${String(imageNum)}`)
-    if (imageNum > 1){    let imageToHide = document.getElementById(`image-${String(imageNum - 1)}`)}
-    else{document.getElementById(`image-${0})}`)}
-    let imageToHide = document.getElementById(`image-${String(imageNum - 1)}`)
+  console.log("current:>", imgNum, "prev:>", prevNum, "images.len:>", images.length)
 
-    imageToShow.setAttribute("class", 'slide displaySlide')
-    imageToHide.setAttribute("class", 'slide hideSlide')
-    //console.log(imageNum, "follow")
+    let imageToShow = document.getElementById(`image${imgNum}`)
+    let imageToHide = document.getElementById(`image${prevNum}`)
+
+    imageToShow.style.display = "block"
+    imageToHide.style.display = "none"
+    console.log(`showed image num ${imgNum} and hid ${prevNum}`)
+    imgNum++
     
-  }
-  else{imageNum = 0; }
+
+    var timeOut = setTimeout(() =>{
+    ImageSwap("right", imgNum, prevNum);
+  }, 1000)
 }
+
 
 
 function goBack(backBtn)
 {
-  //console.log(imageNum, backBtn, "hey")
-  if (imageNum > 0)
+  //console.log(CurrentImageNum, backBtn, "hey")
+  if (CurrentImageNum > 0)
   {
-    imageNum--
+    CurrentImageNum--
   }
-  else{imageNum = images.length - 1; }
+  else{CurrentImageNum = images.length - 1; }
   //go back
   
+  var timeOut = setTimeout(() =>{
+    ImageSwap("right");
+  }, 6000)
 }
 
 
