@@ -64,7 +64,7 @@ a
     min-height: 550px;
     bottom: 4%;
     right: 3%;
-    z-index: 2;
+    z-index: 4;
     display: none;
 }
 .HeaderBar
@@ -479,11 +479,13 @@ a
 
 .slide
 {
-    /* display: none; */
-    position: absolute;
+    display: flex;
+    position: relative;
     width: 100%;
-   align-items: center;
-
+    justify-content: center;
+    left: auto;
+    right: auto;
+    display: none;
 }
 
 
@@ -491,9 +493,9 @@ a
 {
     position: relative;
     height: 100%;
-    width: 80%;
+    width: 100%;
     object-fit: cover;
-    object-position: center ;
+    object-position: center;
     margin-left: auto;
     margin-right: auto;
     bottom: 0;
@@ -505,7 +507,7 @@ a
     height: 50px;
     border-radius: 50%;
     position: absolute;
-    margin-top: 30vh;
+    top: 30vh;
     display: flex;
     align-items: center;
     z-index: 1;

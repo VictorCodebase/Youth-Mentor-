@@ -318,7 +318,7 @@ textarea
 .ActivitiesCarousel:hover .CarouselBtn
 {
     /*? Hovering on parent affects direct child*/
-    transition: 80ms;
+    transition: 130ms;
     display: flex;
 }
 .CarouselImg
@@ -328,24 +328,27 @@ textarea
 .CarouselBtn
 {
     border: solid #64766A;
-    background-color: #94a7ae31;
-    opacity: 0.4;
+    background-color: #dde0e131;
+    opacity: 0.7;
     display: none;
     cursor: pointer;
+}
+
+
+.CarouselBtnArrow
+{
+    fill: #64766A;
 }
 .CarouselBtn:hover,
 .CarouselBtn:focus
 {
     transition: 70ms;
     opacity: 1;
-    color: aliceblue;
+    stroke-width: 5%;
+    stroke: aliceblue;
+    border: solid aliceblue 0.7px;
+    background-color: rgba(0, 0, 0, 0.359);
 }
-.CarouselBtnArrow
-{
-    stroke-width: 10%;
-    stroke: #64766A;
-}
-
 
 
 

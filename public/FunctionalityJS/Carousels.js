@@ -183,73 +183,14 @@
 
 
 
-//! trial 6 -- trying to do a more functional one
-//Vanilla Javascript
-let images = document.querySelectorAll('.slide');
-
-
-function ImageSwap(direction, CurrentImageNum, PrevImageNum)
-{
-
-  if (direction == "right") 
-  {
-    goNext( false, CurrentImageNum,  PrevImageNum)
-  }else if (direction == "left") 
-  {
-    goBack(false, CurrentImageNum,  PrevImageNum)
-  }
-  else{goNext(false, CurrentImageNum,  PrevImageNum)}
-  
-}
-ImageSwap('right', 1, 0);
-
-//?this will have to be impure functions 😐
-function goNext(nextBtn, imgNum, prevNum)
-{
-  if(prevNum == 0){prevNum = images.length; console.log("hry")}
-  else{prevNum = imgNum - 1}
-  if(imgNum > images.length){imgNum = 1}
-
-  console.log("current:>", imgNum, "prev:>", prevNum, "images.len:>", images.length)
-
-    let imageToShow = document.getElementById(`image${imgNum}`)
-    let imageToHide = document.getElementById(`image${prevNum}`)
-
-    imageToShow.style.display = "block"
-    imageToHide.style.display = "none"
-    console.log(`showed image num ${imgNum} and hid ${prevNum}`)
-    imgNum++
-    
-
-    var timeOut = setTimeout(() =>{
-    ImageSwap("right", imgNum, prevNum);
-  }, 1000)
-}
-
-
-
-function goBack(backBtn)
-{
-  //console.log(CurrentImageNum, backBtn, "hey")
-  if (CurrentImageNum > 0)
-  {
-    CurrentImageNum--
-  }
-  else{CurrentImageNum = images.length - 1; }
-  //go back
-  
-  var timeOut = setTimeout(() =>{
-    ImageSwap("right");
-  }, 6000)
-}
 
 
 
 //!Testiomonials image swiper
 let countKeeper = 1;
 let prevCountKeeper = countKeeper - 1;
-let STCimages = document.querySelectorAll(".TestimonialStockImages");
-let Slider = document.getElementById("sliderID");
+const STCimages = document.querySelectorAll(".TestimonialStockImages");
+const Slider = document.getElementById("sliderID");
 
 
 
@@ -268,6 +209,7 @@ function ControlSlider(imageNum, prevImageNum)
   let YouthNameOffDisplay = document.querySelector(`.YouthName${prevImageNum}`)
   var DynamicSTCimageID = document.getElementById(`STCimageID${imageNum}`)
   console.log(`STCimageID${imageNum}`)
+  console.log(`DynamicSTCimageID image num :>${imageNum}`)//! delete this
   const dimensions = DynamicSTCimageID.offsetLeft;
   console.log(`Computed left for image ${countKeeper} is ${dimensions}.`);
   setTimeout(()=>

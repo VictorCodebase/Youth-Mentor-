@@ -221,27 +221,25 @@ lang="en">
         <div class="ActivitiesCarouselContainer">
             <div class="ActivitiesCarousel" >
                 <div class="CarouselImg" id="CarouselImgId">
-                        <section aria-label="Newest Photos">
-                            <div>
+                            
                                 <div>EmojisCollectionID
                                     <li class="slide" id="image1"><img src="https://images.unsplash.com/photo-1524807621076-c7ba046f3f3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></li>
                                     <li class="slide" id="image2"><img src="https://images.unsplash.com/photo-1664875085456-ff0b74e5317b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt=""></li>
                                     <li class="slide" id="image3"><img src="https://images.unsplash.com/photo-1493515694075-fff2d464227d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""></li>
                                     <li class="slide" id="image4"><img src="https://images.unsplash.com/photo-1664875085441-5ef8984ed12d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt=""></li>
                                 </div>
-                            </div>
-                        </section>
-                        <button class="CarouselBtn BtnPrev" onclick="goBack('true')">
+                            
+                        <div class="CarouselBtn BtnPrev" onclick="SwitchButton(true, prevImage, prevImage-1)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left CarouselBtnArrow" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                             </svg>
-                        </button>
+                        </div>
 
-                        <button class="CarouselBtn BtnNext" onclick="goNext(true)">
+                        <div class="CarouselBtn BtnNext" onclick="SwitchButton(true, currentImage+1, currentImage)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right CarouselBtnArrow" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                             </svg>
-                        </button>
+                        </div>
                     </div>
                 </div>
                
@@ -318,6 +316,7 @@ lang="en">
     <script src="./FunctionalityJS/Response.js"></script>
     <script src="./WebsiteText/TextFile.js"></script>
     <script src="./FunctionalityJS/Carousels.js"></script>
+    <script src="./FunctionalityJS/Carousel2.js"></script>
     <script src="./FunctionalityJS/PageAnimations.js"></script>
     <script src="./FunctionalityJS/ChatBotAssistant.js"></script>
 </body>
