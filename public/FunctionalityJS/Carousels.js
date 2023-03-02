@@ -192,14 +192,25 @@ let prevCountKeeper = countKeeper - 1;
 const STCimages = document.querySelectorAll(".TestimonialStockImages");
 const Slider = document.getElementById("sliderID");
 
+var imageOptionWidth = document.getElementById("FacesContainerID").offsetWidth;
+console.log(imageOptionWidth)
+const widthPerImage = 142;
+const numberOfFitingImages = Math.floor(imageOptionWidth/widthPerImage);
+console.log(numberOfFitingImages)
 
+for (var i = numberOfFitingImages + 1; i <= STCimages.length; i++)
+{
+  var imageToExclude = document.getElementById(`STCimageID${i}`);
+  imageToExclude.setAttribute("id", `STCimageID${i}Hidden`)
+  console.log(imageToExclude)
+  imageToExclude.style.display = "none"
+}
 
 function ControlSlider(imageNum, prevImageNum)
 {
   if (imageNum == 1){prevImageNum = STCimages.length;}
   else if(imageNum >= 2){prevImageNum = imageNum - 1;}
 
-  console.log(`prev >> ${prevImageNum}, img>> ${imageNum}`)
   let YouthOnDisplay = document.getElementById(`STCimageDisplay${imageNum}`)
   let YouthOffDisplay = document.getElementById(`STCimageDisplay${prevImageNum}`)
 
@@ -208,10 +219,7 @@ function ControlSlider(imageNum, prevImageNum)
   let YouthNameOnDisplay = document.querySelector(`.YouthName${imageNum}`)
   let YouthNameOffDisplay = document.querySelector(`.YouthName${prevImageNum}`)
   var DynamicSTCimageID = document.getElementById(`STCimageID${imageNum}`)
-  console.log(`STCimageID${imageNum}`)
-  console.log(`DynamicSTCimageID image num :>${imageNum}`)//! delete this
   const dimensions = DynamicSTCimageID.offsetLeft;
-  console.log(`Computed left for image ${countKeeper} is ${dimensions}.`);
   setTimeout(()=>
   {
     // YouthOnDisplay.style.opacity = "1"

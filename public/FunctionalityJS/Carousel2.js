@@ -20,7 +20,6 @@ function  SwitchButton(nextBtn, imgNum, prevNum)
   currentImage = imgNum;
   prevImage = prevNum;
 
-  console.log("current:>", imgNum, "prev:>", prevNum, "images.len:>", images.length)
 
     let imageToShow = document.getElementById(`image${imgNum}`)
     let imageToHide = document.getElementById(`image${prevNum}`)
@@ -28,7 +27,6 @@ function  SwitchButton(nextBtn, imgNum, prevNum)
     imageToHide.style.display = "none"
     imageToShow.style.display = "block"
     
-    console.log(`showed image num ${imgNum} and hid ${prevNum}`)
     imgNum++
     
     if(nextBtn == true){clearTimeout(timeOut)}
@@ -37,3 +35,6 @@ function  SwitchButton(nextBtn, imgNum, prevNum)
     SwitchButton(false, imgNum, prevNum, false);
   }, 2000)
 }
+
+
+//!Ensuring the carousel buttons dissapear after hovering after some time

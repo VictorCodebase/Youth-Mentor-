@@ -169,6 +169,7 @@ $(document).ready(function()
 //!Ensuring the chatbot is draggable
 
 var draggable = document.getElementById("handle");
+var draggable2 = document.getElementById("HeaderBarID")
 var dragged = document.getElementById("ChatbotDialog");
 var isDragging = false;
 var currentX;
@@ -182,6 +183,7 @@ var prevY = 0;
 var interpolationFactor = 0.1;
 
 draggable.addEventListener("mousedown", dragStart);
+draggable2.addEventListener("mousedown", dragStart);
 
 
 function dragStart(e) {
@@ -189,7 +191,9 @@ function dragStart(e) {
   initialY = e.clientY - yOffset;
 
   draggable.addEventListener("mouseup", dragEnd);
+  draggable2.addEventListener("mouseup", dragEnd);
   draggable.addEventListener("mousemove", toDebounce);
+  draggable2.addEventListener("mousemove", toDebounce);
 
   isDragging = true;
 }
@@ -242,7 +246,7 @@ let drag = (e) =>
 
 //function drag(e) {}
 
-drag = debounce(drag, 15)
+drag = debounce(drag, 3)
 
 
 function setTranslate(xPos, yPos, el)

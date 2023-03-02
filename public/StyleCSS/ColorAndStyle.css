@@ -98,20 +98,23 @@ textarea
 .ExtraInfo
 {
     display: none;
+    outline: solid #64766A 1px;
+    max-height: 30px;
+    border-radius: 4px;
 }
 .ExtraInfoParent:hover > .ExtraInfo
 {
-    transition: all 200s;
     z-index: 2;
     display: flex;
     position:absolute;
     align-items: center;
     left: -60px;
     top: 40px;
-    background-color: grey;
+    background-color: white;
     height: 40px;
     width: max-content;
-    color: aliceblue;
+    color: #64766A;
+    /* !!!!! here */
 }
 .ExtraInfoParent:hover > .ExtraInfo > p
 {

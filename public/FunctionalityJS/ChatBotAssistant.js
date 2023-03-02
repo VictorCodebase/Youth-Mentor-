@@ -46,9 +46,9 @@ function StoreData(){
 //!Ensuring that responses make sense
 
 let errorMessage = "Sorry, an error occured; I am working to resolve it hang on tight";
-let wrongEmailInput = "";
-let wrongContactInput = "";
-let successMessage = "";
+let wrongEmailInput = "The email format you entered appears to be faulty, please consider retrying. Thank you";
+let wrongContactInput = "The contact format you entered appears to be faulty, please consider retrying. Thank you";
+let successMessage = `Awesome! Your message on ${subject} has been successfully sent to Anne. You'll get your response very soon`;
 
 function ChatBotRespond(expectation)
 {
