@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public"
+    "\\public",
+    "\\public\\FunctionalityJS"
   ],
-  "SelectedNode": "\\index.js",
+  "SelectedNode": "\\public\\FunctionalityJS\\ChatBotAssistant.js",
   "PreviewInSolutionExplorer": false
 }

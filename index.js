@@ -1,46 +1,19 @@
 const express = require('express');
 const path = require('path')
-const mongoose = require('mongoose');
-mongoose.set('strictQuery', false);
+const bodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 const port = 3200;
 
-//mongoose.connect('mongodb://localhost:27017/DemoDBAnneKIthinji')
-mongoose.connect("mongodb+srv://VictorKithinji:MarkDB@annekithinjidbdemo.51erqxt.mongodb.net/test")
-.then(() =>
-{
-    console.log("MongoDB connected")
-})
-.catch((e)=>
-{
-    console.log(`Ooopsie=> ${e}`)
-})
 
-const Schema = new mongoose.Schema({
-    id:{
-        type:String
-    },
-    title: {
-        type:String,
-        require:true
-    },
-    sampleText:{
-        type:String,
-        require:false
-    }
-})
-
-const collection = new mongoose.model('Demo@', Schema);
-// meaning DBconnect db will use the schema called Schema 
+const uri = ("mongodb+srv://VictorKithinji:MarkDB@annekithinjidbdemo.51erqxt.mongodb.net/test")
 
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname, 'public')))
-
-const identificationData = [];
-const message =[];
+app.use(bodyParser.json());
 
 
 //?landPage
@@ -50,20 +23,37 @@ app.get('/', (req, res) =>
     console.log("home rendered")
 })
 
- app.post('/', (req, res) =>
- {  
-    data ={
-        id: Date.now().toString(),
-        title: "req.body.ClientName",
-        sampleText: req.body.Message
+app.post('/api/messages', (req, res) => {
+
+
+    MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) =>
+    {
+        if(err){
+        console.log('Error connecting to MongoDB:', err);
+        res.status(500).send('Internal server error');
+        return;
         }
-        try{
-            collection.insertMany([data])
-            console.log(data)
-        }catch{
-            console.log("Error caught when sending received data to mongoDB")
-        }
- })
+
+        const db = client.db('newTestDB');
+        const collection = db.collection('Messages')
+
+        const data = {
+            message: req.body.message,
+            client: req.body.client
+        };
+
+        collection.insertMany([data])
+        .then (() => {
+            console.log("Data inserted successfully to MongoDB");
+            res.status(200).send("Message sent Successfully");
+        })
+        .catch(err =>{
+            console.log('Error inputing Data to MongoDB:', "\n", err);
+            res.status(500).send("Internal server error");  
+        });
+    })
+})
+
 
  app.get('/MyApproach.html', (req, res)=>
  {

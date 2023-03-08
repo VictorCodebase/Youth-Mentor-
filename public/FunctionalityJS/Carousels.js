@@ -1,5 +1,5 @@
 
-// /*
+//!Ive left all these attempts to just appreciate how the process and Growth. Thanks be to God for liberating me enough to accomplish this /*
 // 1. get full number of images
 // 2. set an interval that runs through them, then restarts
 // 3. at each interval, an image is set to display block, rest are display none
@@ -206,10 +206,23 @@ for (var i = numberOfFitingImages + 1; i <= STCimages.length; i++)
   imageToExclude.style.display = "none"
 }
 
-function ControlSlider(imageNum, prevImageNum)
+var DefinePreviousAfterInput;
+var SliderTimeout;
+var SliderKeeperTimeout;
+
+function ControlSlider(imageNum, prevImageNum, byUser)
 {
+   if(byUser != true)
+   {
   if (imageNum == 1){prevImageNum = STCimages.length;}
   else if(imageNum >= 2){prevImageNum = imageNum - 1;}
+  DefinePreviousAfterInput = imageNum;
+   }
+   else{
+    clearTimeout(SliderTimeout)
+    clearTimeout(SliderKeeperTimeout)
+  }
+  console.log("New previous input:", prevImageNum," Current value", imageNum)
 
   let YouthOnDisplay = document.getElementById(`STCimageDisplay${imageNum}`)
   let YouthOffDisplay = document.getElementById(`STCimageDisplay${prevImageNum}`)
@@ -220,10 +233,10 @@ function ControlSlider(imageNum, prevImageNum)
   let YouthNameOffDisplay = document.querySelector(`.YouthName${prevImageNum}`)
   var DynamicSTCimageID = document.getElementById(`STCimageID${imageNum}`)
   const dimensions = DynamicSTCimageID.offsetLeft;
-  setTimeout(()=>
+  //!
+  SliderTimeout = setTimeout(()=>
   {
-    // YouthOnDisplay.style.opacity = "1"
-    // YouthOffDisplay.style.opacity = "0"
+     
     anime({
       targets:`#STCimageDisplay${imageNum}`,
       opacity: 1,
@@ -249,15 +262,15 @@ function ControlSlider(imageNum, prevImageNum)
     easing:'easeInOutQuad'
   })
 
-  setTimeout(() =>
+  SliderKeeperTimeout = setTimeout(() =>
   {
     if(countKeeper == STCimages.length)
     {
       countKeeper = 1
     }
     else{countKeeper++}
-    ControlSlider(countKeeper, prevCountKeeper)
+    ControlSlider(countKeeper, prevCountKeeper, false)
   }, 3500)
 }
 
-ControlSlider(countKeeper, prevCountKeeper)
+ControlSlider(countKeeper, prevCountKeeper, false)

@@ -8,7 +8,6 @@ let prevImage = currentImage-1;
 var timeOut;
 SwitchButton(false, currentImage, prevImage, false);
 
-//?this will have to be impure functions 😐
 function  SwitchButton(nextBtn, imgNum, prevNum)
 {
     if(prevNum == imgNum){prevNum = imgNum - 1}
@@ -33,7 +32,7 @@ function  SwitchButton(nextBtn, imgNum, prevNum)
 
     timeOut = setTimeout(() =>{
     SwitchButton(false, imgNum, prevNum, false);
-  }, 2000)
+  }, 4000)
 }
 
 

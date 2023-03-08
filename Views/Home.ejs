@@ -84,9 +84,9 @@ lang="en">
             <!-- ! Use ::Before to add the images before -->
             <div class="Assistant textBubble">
                 <!-- i'll append child -->
-                <p>title</p>
-                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <div name="pseudoForm" target="_blank">
+                <p>Assistant</p>
+                <p>  Hello! 😊 I'm Anne's assistant, and I'm here to help ensure that Anne receives all of your messages promptly😜.  <br><br>If you'd like to participate in a survey, simply click on the survey button and enter the survey-key as prompted. Rest assured that all of your conversations with Anne will remain completely confidential😊.  <br><br>So, what message would you like to send to Anne today?</p>
+                <form name="pseudoForm" id="pseudoFormID">
                     <div class="nameBox chatContactBox">
                         <label for="name">Name: </label>
                         <input type="text" id="ChatName">
@@ -94,10 +94,12 @@ lang="en">
                     <br>
                     <div class="emailBox chatContactBox">
                         <label for="contact">Contact: </label>
-                        <input type="text" id="ChatContact">
+                        <input type="tel" id="ChatContact">
                     </div>
-                    <button class="CommonButton SubmitDetailsChat" onclick="StoreData()"><p>submit</p></button>
-                </div>
+                    <!--! =============================== -->
+                    <button id="SubmitDetailsChatID" class="CommonButton SubmitDetailsChat" type="submit"
+                    ><p>submit</p></button>
+                </form>
             </div>
 
 
@@ -129,7 +131,7 @@ lang="en">
             </div>
         </div>
         <div>
-            <form action="/" method="post" class="DraftArea PrimaryShadeForBG">
+            <form class="DraftArea PrimaryShadeForBG" id="MessageBoxID">
                 <div class="MessageSlot">
                     
                         
@@ -146,14 +148,11 @@ lang="en">
                         </div>
                         <!--! text area to include emoji section-->
                         <textarea name="Message" id="Message" cols="35" rows="2" class="textArea"></textarea> 
-                        <div class="GhostInputs">
-                            <input type="text" name= "ClientName" id="GhostName">
-                            <input type="text" name ="Contact" id="GhostContact">
-                        </div>
+                        <!--! ===========================================  -->
                     </div>
                 </div>
                 <div class="SendSlot">
-                    <button type="submit" class="send option" onclick="newMessage(document.getElementById('Message').value)">
+                    <button type="submit" id="sendID" class="send option" onclick="newMessage(document.getElementById('Message').value)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send rotateToView" viewBox="0 0 16 16">
                         <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                         </svg>
