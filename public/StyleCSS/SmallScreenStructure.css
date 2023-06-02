@@ -1,0 +1,329 @@
+@media screen and (max-width:700px)
+{
+    .smallscreen
+    {
+        display: block;
+    }
+    .NavbarContainer, 
+    .LandingPageBackgroundContainer,
+    .ActivitiesBlockBackgroundContainer,
+    .ApproachLarge
+    {
+        display: none;
+    }
+    .main
+    {
+        width: 100vw;
+        height: fit-content;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .menuOverlay
+    {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+        display: none;
+    }
+    .backButton
+    {
+        position: absolute;
+        z-index: 7;
+        height: 4rem;
+        background-color: aliceblue;
+        width: 100%;
+        border-bottom: solid #64766A 1px;
+        
+    }
+    .backButton > svg
+    {
+        margin: 1rem;
+        fill: #64766A;
+    }
+    
+    
+    .menuOptions
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        height: 50%;
+        margin: auto;
+        top: 20%;
+        z-index: 5;
+        border-radius: 10px;
+        outline: solid #64766A 1px;
+        background-color: aliceblue;
+    }
+    .menuOptions > a
+    {
+        text-align: center;
+        margin-top: 2rem;
+        color: black;
+        width: 50%;
+        border-bottom: solid black 1px;
+    }
+    
+    .menuButton
+    {   
+        top: 0;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+    }
+    .menuButton > svg
+    {
+        margin-top: 10px;
+    }
+    
+    .heroImage
+    {
+        width: 100vw;
+        position: absolute;
+        object-fit: cover;
+    }
+    
+    .heroImage > img
+    {
+        position: relative;
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    
+    .textBox1
+    {
+        position: relative;
+        top: 20rem;
+        width: 100vw;
+        height: fit-content;
+        border-top: solid #64766A 0.5px;
+        background-color: aliceblue;
+    }
+    
+    .titleContainer
+    { 
+        margin-left: 2rem;
+        margin-right: 2rem;
+        height: fit-content;
+    }
+    
+    .TitleName, .speciality
+    {
+        width: 100%;
+    }
+    .TitleName > h1
+    {
+        font-size: 400%;
+        text-align: center;
+        z-index: 4;
+    }
+    .speciality > h2
+    {
+        font-size: larger;
+        text-align: center;
+    }
+    
+    
+    .text1
+    {
+        width: 100vw;
+        height: fit-content;
+        overflow: hidden;
+        
+
+    }
+    .text1 > p
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: justify;
+    }
+    
+    .button1
+    {
+        position: relative;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 3rem;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        background-color: #64766A;
+        box-shadow: 0 -5px 30px 25px aliceblue;
+    }
+    .button1 > p
+    {
+        margin: auto;
+    }
+    
+    
+    .demospace
+    {
+        z-index: 1;
+        position: relative;
+        width: 100vw;
+        height: 50vh;
+    }
+    
+
+        /* ! Activities starts here */
+        .ActivitiesMobileView
+    {
+        max-width: 100vw;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+    .MainContent
+    {
+        position: relative;
+        /* background-color: antiquewhite; */
+        width: 100vw;
+        height: fit-content;
+        top: 10vh;
+    }
+
+    .banner
+    {
+        width: 100vw;
+        height: 30vh;
+        margin-top: 20px;
+        background-color: rgb(32, 32, 31);
+
+    }
+    .banner >img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .bannerText
+    {
+        position: relative;
+        top: -16vh;
+        margin-left: 50%;
+        right: 0px;
+        height: 15vh;
+        width: 50%;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: radial-gradient(circle at bottom right,black, rgba(0, 0, 0, 0.008),transparent);
+    }
+    .ConnectAnne
+    {
+        width: 100vw;
+        margin-top: 30%;
+        height: fit-content;
+    }
+    .ConnectAnne > div
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .title2
+    {
+        height: fit-content;
+        margin-bottom: 5%;
+    }
+    .title2 > h4
+    {
+        text-align: center;
+    }
+    .connectBtn
+    {
+        width: 90%;
+        margin: auto;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        border: solid #64766A 1px;
+    }
+    .connectBtn > p
+    {
+        margin: auto;
+    }
+
+    /* !Contacts starts here */
+    .ContactsBlockBackgroundContainer
+    {
+        flex-direction: column;
+        min-width: 100vw;
+    }
+    .DividedPanels
+    {
+        width: 100vw;
+    }
+    .ContactsBlockBackgroundContainer
+    {
+        height: 130vh;
+    }
+    .BackgroundImg
+    {
+        object-fit: contain;
+    }
+
+
+    /* !working on the chat feature */
+    .ChatBar
+    {
+        position: fixed;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        right: 2%;
+        top: -10vh;
+        z-index: 2;
+        align-items: center;
+        cursor: pointer;
+    
+    } 
+    .hidden
+    {
+        width: 100vw;
+        height: 80vh;
+        bottom: 5vh;
+        right: 0;
+        left: 0;
+        z-index: 4;
+        display: none;
+    }
+    .BackGroundTexture
+    {
+        display: none;
+    }
+
+
+    /* !Approach page style */
+    .approachSmallScreen
+{
+    width: 100vw;
+    height: fit-content;
+}
+.mainApproachImage
+{
+    width: 100%;
+    height: fit-content;
+    background-color: beige;
+}
+.mainApproachImage > img
+{
+    width: 100%;
+    object-fit: contain;
+}
+.mainApproachText 
+{
+    height: fit-content;
+}
+.mainApproachText > p
+{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+}

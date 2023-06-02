@@ -1,0 +1,850 @@
+/*! Body and General Styling Starts ####################*/
+body
+{
+    overflow-x: hidden;
+}
+a
+{
+    text-decoration: none;
+}
+.smallscreen
+{
+    display: none;
+}
+.loadingSign
+{
+    height: 40%;
+    width: auto;
+    max-height: 400px;
+    min-height: 60px;
+
+}
+.Line
+{
+    background-color: black;
+    height: 1px;
+    width: 60px;
+}
+.DisplayHidden
+{
+    display: none;
+}
+
+.CommonButton
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.ButtonsStylized
+{
+    width: 70%;
+    height: 50px;
+}
+
+.ButtonText
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+
+/*decided to put chatbox hereLeftPanelLandingPage coz its shared*/
+
+.hidden
+{
+    position: fixed;
+    overflow: hidden;
+    width: 380px;
+    height: 85vh;
+    min-height: none;
+    bottom: 4%;
+    right: 3%;
+    z-index: 4;
+    display: none;
+}
+.HeaderBar
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.BackButton
+{
+    display: flex;
+    height: 100%;
+    width: 20%;
+    align-items: center;
+}
+.Heading
+{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.online
+{
+    height: 8px;
+    width: 8px;
+
+}
+
+.ChatArea
+{
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.BackGroundTexture
+{
+    position: fixed;
+    overflow:hidden;
+    width: 365px;
+    background-color: aqua;
+    z-index: 0;
+    height: 68%;
+    opacity: 5%;
+}
+.BackGroundTexture > img{
+    position: absolute;
+
+}
+.EmojiSelectionBar
+{
+    position: absolute;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    display: none;
+    bottom: 10%;
+}
+
+.EmojisSearch
+{
+    z-index: 1;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.EmojiSearchBar
+{
+    z-index: 1;
+    margin-left: 10px;
+    height: 80%;
+    width: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.EmojisCollection
+{
+    z-index: 1;
+    width: 100%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.EmojisCollection > div
+{
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    text-align: center;
+}
+#internetConnectionErr
+{
+    height: 45%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}
+
+
+.DraftArea
+{
+    width: 100%;
+    height: 8%;
+    min-height: max-content;
+    display: flex;
+    flex-direction: row;
+} 
+.SendSlot
+{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}  
+.GhostInputs
+{
+    position: absolute;
+    width: 50px;
+    background-color: transparent;
+}
+.GhostInputs > input{
+    /* width: 10px;
+    height: 10px; */
+    border: none;
+    background-color: transparent;
+}
+.EmojiSection
+{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}
+.option
+{
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rotateToView
+{
+    transform: rotate(45deg);
+}
+.messageSlot
+{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.messageDraft
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    overflow: auto;
+}
+.textArea
+{
+    background-color: transparent;
+}
+
+
+.DragArea
+{
+    position: absolute;
+    bottom: 0;
+    height: 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.DragHandle
+{
+    width: 30%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ .ChatBar
+{
+    position: fixed;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    right: 2%;
+    margin-top: 80vh;
+    z-index: 2;
+    align-items: center;
+    cursor: pointer;
+
+} 
+
+
+
+
+
+
+
+/* UNDONE(return to finish fromhere): Unfinished */
+/* conversation box styling done down */
+.textBubble
+{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    width: 250px;
+    min-height: 20px;
+    height:fit-content;
+    max-height: none;
+}
+.Assistant
+{
+    left: 30px;
+    border-radius: 10px 10px 10px 0;
+}
+.Assistant::before
+{
+    content: "";
+    display: flex;
+    position: absolute;
+    background-image: url('/ImageFolder/Icons/AVA.jpg');
+    background-repeat: no-repeat;
+    width: 30px;
+    left: -20px;
+    top: 95%;
+    height: 30px;
+    box-shadow: 0 0 0 2.5px aliceblue, 0 0 0 3.5px #64766A;
+    border-radius: 50%;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.Client
+{
+    left: 60px;
+    z-index: 0;
+    border-radius: 10px 10px 0 10px;
+}
+.ClientTag
+{
+    z-index: 0;
+    display: flex;
+    position: absolute;
+    background-color: #64766A;
+    color: aliceblue;
+    width: 30px;
+    right: -20px;
+    height: 30px;
+    box-shadow: 0 0 0 2.5px aliceblue, 0 0 0 3.5px #64766A;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.SubmitType
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.submitTypeOption
+{
+    border-bottom: solid #94a7ae31 0.5px ;
+    height: 40px;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.submitTypeOption:hover
+{
+    border-bottom: solid #64766A 1px ;
+    
+}
+
+.SubmitDetailsChat
+{
+    display: flex;
+    width: 98%;
+    margin-top: 20px;
+    text-align: center;
+}
+.SubmitDetailsChat > p{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*? Body and General Styling Ends #######################*/ 
+
+
+
+
+/*! Navigation Panel Starts */
+.NavbarContainer
+{
+    position: fixed;
+    z-index: 3;
+    height: 126px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.Title
+{
+    width: 50%;
+    height: 100%;
+}
+.BrandingTextBox
+{
+    max-width: fit-content;
+    min-width: 234;
+    height: 50px;
+    padding-left: 7%;
+    margin-top: 45px;
+}
+.Branding
+{
+    display: flex;
+    align-items: center;
+}
+.AnneLogo
+{
+    font-size: 20;
+}
+
+.NavigationElements
+{
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+}
+.Navigation
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 53%;
+    min-width: 350px;
+    height: 50px;
+    margin-top: 45px;
+}
+.NavElement
+{
+    display: flex;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+}
+.NavText
+{
+    margin-left: 15%;
+}
+
+/*? Navigation Panel ends #############################*/
+
+
+
+
+/*! Landing Page Starts ###########################################*/
+.BackgroundContainer
+{
+    width: 100%;
+    min-width: 1000px;/*! in response css, the navbar should dissappear on scroll down*/
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+.LandingPageBackgroundContainer
+{
+    margin-top: 1%;
+    height: 100vh;
+}
+
+.DividedPanels
+{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.SmallStyling
+{
+    display: none;
+}
+
+/*Dealing with right panel now*/
+.MainTitleBlock
+{
+    width: 100%;
+    height: 35%;
+}
+.TitleContainer
+{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 15%;
+    margin-top: 30%;
+}
+
+/* .SpecialityContainer
+{
+    position: static;
+    margin-top: -20%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+} */
+
+
+.LandingPageText
+{
+    position: relative;
+    width: 70%;
+    margin-left: 15%;
+    text-align: justify;
+}
+
+
+/*? Landing Page Ends ################################*/
+
+
+
+
+
+/*! Activities Block Starts ###########################################*/
+
+.ActivitiesBlockBackgroundContainer
+{
+    position: relative;
+    z-index: 0;
+    height: 80vh;
+    width: 100%;
+    min-width: 1000px;
+    margin-left: auto;
+    margin-right: auto
+}
+.ActivitiesCarouselContainer
+{
+    width: 100%;
+    height: 80vh;
+    margin-top: 20vh;
+    overflow: hidden;
+}
+.ActivitiesCarousel
+{
+    width: 100%;
+    display: flex;
+}
+ .CarouselImg
+{
+    position: relative;
+    display: flex;
+    height: 105vh;
+    width: 100%;
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+
+
+.CarouselPreviewContainer
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    min-width: 30%;
+    max-width: 85%;
+    width: fit-content;
+    overflow: auto;
+    bottom: 35%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, 50%);
+}
+
+.PreviewContainer
+{
+    display: flex;
+    flex-shrink: 0;
+    width: 150px;
+    height: 70%;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.PreviewContainer > img{
+    object-fit:cover;
+    height: 100%;
+}
+.PreviewContainer > div{
+    position: absolute;
+    height: 70%;
+    width: 150px;
+}
+
+
+.slide
+{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    display: none;
+}
+
+
+.slide > img
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+} 
+
+
+
+
+/* .displaySlide
+{
+    display: flex;
+}
+.hideSlide
+{
+    display: none;
+} */
+
+/*? Activities Block Ends ################################*/
+
+
+
+
+
+/*! Contacts Block Starts ###########################################*/
+
+.ContactsBlockBackgroundContainer
+{
+    height: 100vh;
+}
+
+.LeftPanelContactsPage
+{
+    text-indent:15%;
+}
+
+
+.contactAnne
+{
+    width: 80%;
+    height: 50%;
+    margin-top: 40%;
+    margin-left: 15%;
+}
+.details
+{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-top: 10px;
+    align-items: baseline;
+
+}
+.contactsText
+{
+    width: 65px;
+}
+.visitorName
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.messagetextArea
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 50%;
+    align-items: center;
+}
+
+.messagebox
+{
+    height: 70%;
+}
+
+.submitBox
+{
+    width: 100%;
+    height: 40px;
+}
+.submitBox > p, svg
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*? Contacts Block Ends ################################*/
+
+
+
+
+
+
+/*! MY approach specific stlyes*/
+
+.ApproachCarousel
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.ImageDisplay
+{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    margin-top: 125px;
+    background-color: black;
+}
+.ImageDisplay > img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.MyApproach
+{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    
+}
+.MyApproachTextContainer
+{
+    height: 60vh;
+}
+#ApproachText
+{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 60%;
+    width: 40%;
+}
+
+
+
+/*! Testimonials section starts*/
+.Testimonials
+{
+    /* ! Im really sorry. Such a piece of art! probably Ill use it elsewhere */
+    display: none;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.FacesContainer
+{
+    z-index: 1;
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+}
+.TestimonialStockImages
+{
+    
+    position: relative;
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+    top: 300px;
+}
+.Slider
+{
+    position: absolute;
+    width: 60vw;
+    height: 5px;
+    margin-top: 610px;
+}
+.SliderNode
+{
+    position: relative;
+    width: 60px;
+    height: 100%;
+    left: 18%;
+    border-radius: 5px;
+}
+
+
+
+.FacesContainerOnDisplay
+{
+    z-index: 1;
+    position: relative;
+    width: 40vw;
+}
+.TestimonialStockImageOnDisplay
+{
+    position: absolute;
+    object-fit: cover;
+    width: 200px;
+    height: 500px;
+    margin-top: 100px;
+    opacity: 0;
+}
+.BackDrop
+{
+    position: absolute;
+    right: 0;
+    margin-top: 120px;
+    z-index: 0;
+    width: 41vw;
+    height: 500px;
+}
+.YouthTestimony
+{
+    position: absolute;
+    width: 40%;
+    right: 10%;
+    top: 20%;
+}
+.YouthTestimony > p
+{
+    position: absolute;
+    display: none;
+}
+.YouthTestimonyName
+{
+    position: absolute;
+    right: 10%;
+    top: 80%;
+}
+.YouthTestimonyName > h3
+{
+    position: relative;
+    display: none;  
+}
+.Quote
+{
+    position: absolute;
+    right: 51%;
+    top: 20%;
+}
