@@ -89,6 +89,7 @@ function retractFunction()
   var retractBtn = document.getElementById("button1ID")
   if(retracted == true)
   {
+    console.log("retracting")
     retracted = false
     anime({
       targets: "#text1ID",
