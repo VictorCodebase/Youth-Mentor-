@@ -1,0 +1,67 @@
+//  Mark Kithinji
+//  Hey. This piece of code is supposed to send data from client side JS to Node as a JSON object:     const data = { message: messageData, client: clientData};
+//  console.log("im here 2")
+//      fetch('/api/messages',{
+//          method: 'POST',
+//          headers: {'content-type' : 'application/json'},
+//          body: JSON.stringify(data)
+//      }).then(response => {
+//          if (response.ok)
+//          {
+//              console.log('Both messages sent successfully as JSON files')
+//          }else{
+//              console.log("the following errors were captured when sending data to server", "\n", response)
+//          }
+//      })
+//      .catch(error => {
+//          console.log("Network issues; I think")
+//      }). the Node code that receives this data is this:  const MongoCL = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+//      MongoCL.connect(uri, (err, client) =>
+//      {/*code*/}). Im however getting this: error MongoInvalidArgumentError: Method `connect` only accepts a callback. I think I have clearly given the callback function with the arguments err and client but for some reason Node cant seem to get that. What could be the issue
+
+// Based on the error message you are seeing, it seems like the connect method is not receiving a valid callback function. One possible issue could be that the callback function you are passing is not defined correctly.
+
+// Here is an example of how you could define the MongoCL.connect method with a callback function:
+
+// javascript
+// Copy code
+// MongoCL.connect(uri, (err, client) => {
+//   if (err) {
+//     console.error('Error connecting to MongoDB:', err);
+//   } else {
+//     console.log('Connected to MongoDB successfully!');
+//     // Your code to interact with MongoDB goes here
+//   }
+// });
+// In the callback function, you first check if an error occurred during the connection process by checking if err is truthy. If there is an error, you can log it to the console. Otherwise, you can log a success message and start interacting with the database using the client object.
+
+// Make sure your connect method has a similar structure and that you are passing it to MongoCL.connect correctly.
+
+
+
+
+// Mark Kithinji
+// how do i make sure my connect method has a similar structure and that i am passing it to MongoCL.connect correctly.
+// To ensure that your connect method has a similar structure to the example I provided, you can copy and paste the code into your Node.js file and modify it to suit your specific needs. Here is the code again for reference:
+
+// javascript
+// Copy code
+// MongoCL.connect(uri, (err, client) => {
+//   if (err) {
+//     console.error('Error connecting to MongoDB:', err);
+//   } else {
+//     console.log('Connected to MongoDB successfully!');
+//     // Your code to interact with MongoDB goes here
+//   }
+// });
+// To ensure that you are passing the callback function to MongoCL.connect correctly, you can check the following:
+
+// Make sure that the MongoCL object has been properly defined and instantiated with the appropriate connection parameters, such as the uri and options object.
+
+// Make sure that the connect method is being called on the MongoCL object.
+
+// Make sure that the second argument to the connect method is the callback function you defined, which takes two arguments: err and client.
+
+// Make sure that the callback function is defined before it is passed to the connect method.
+
+// If you are still experiencing issues, it may be helpful to provide more information or code snippets so that I can better understand the problem.
