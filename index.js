@@ -11,7 +11,8 @@ const port = 3200;
 const session = require('express-session')
 let collectionID;
 
-const uri = ("mongodb+srv://VictorKithinji:MarkDB@annekithinjidbdemo.51erqxt.mongodb.net/test")
+const uri = ("mongodb+srv://VictorKithinji:MarkDB@annekithinjiclientdb.9f94r.mongodb.net/test")
+
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
