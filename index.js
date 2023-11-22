@@ -7,7 +7,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 const router = express.Router();
-const port = 3200;
+const port = process.env.PORT || 3200;
 const session = require('express-session')
 let collectionID;
 
