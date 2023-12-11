@@ -5,6 +5,12 @@
         "src": "index.js",
         "use": "@now/node-server"
       }
+    ],
+    "routes": [
+      {
+        "src":"index.js",
+        "dest":"/index.js"
+      }
     ]
   }
   
